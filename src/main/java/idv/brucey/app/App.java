@@ -1,16 +1,21 @@
-package com.carrefour.apimanagement;
+package idv.brucey.app;
 
-import lombok.*;
+import idv.brucey.app.VO.BookSet;
+import idv.brucey.app.VO.BookUnit;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cal {
+/**
+ * Hello world!
+ *
+ */
+public class App {
     public static void main(String[] args) {
+        App app = new App();
         List<BookSet> unGroupBookSetList = new ArrayList<>();
-        List<BookSet> groupedBookSetListGemini = new ArrayList<>();
-        List<BookSet> groupedBookSetListChatGpt = new ArrayList<>();
+        List<BookSet> groupedBookSetList1 = new ArrayList<>();
 
         BookSet set01 = new BookSet();
         BookSet set02 = new BookSet();
@@ -148,27 +153,25 @@ public class Cal {
         unGroupBookSetList.add(set13);
         unGroupBookSetList.add(set14);
         unGroupBookSetList.add(set15);
-                unGroupBookSetList.add(set16);
-                unGroupBookSetList.add(set17);
-                unGroupBookSetList.add(set18);
-                unGroupBookSetList.add(set19);
-                unGroupBookSetList.add(set20);
-                unGroupBookSetList.add(set21);
-                unGroupBookSetList.add(set22);
-                unGroupBookSetList.add(set23);
-                unGroupBookSetList.add(set24);
-                unGroupBookSetList.add(set25);
-                unGroupBookSetList.add(set26);
-                unGroupBookSetList.add(set27);
-//
-                groupedBookSetListGemini = Cal.calculateGemini(unGroupBookSetList);
-        groupedBookSetListChatGpt = Cal.calculateChatGpt(unGroupBookSetList);
+        unGroupBookSetList.add(set16);
+        unGroupBookSetList.add(set17);
+        unGroupBookSetList.add(set18);
+        unGroupBookSetList.add(set19);
+        unGroupBookSetList.add(set20);
+        unGroupBookSetList.add(set21);
+        unGroupBookSetList.add(set22);
+        unGroupBookSetList.add(set23);
+        unGroupBookSetList.add(set24);
+        unGroupBookSetList.add(set25);
+        unGroupBookSetList.add(set26);
+        unGroupBookSetList.add(set27);
+        //
+        groupedBookSetList1 = app.calculate1(unGroupBookSetList);
 
-        //        System.out.println(groupedBookSetListGemini);
-        System.out.println(groupedBookSetListChatGpt);
+        System.out.println(groupedBookSetList1);
     }
 
-    public static List<BookSet> calculateGemini(List<BookSet> ungroupList) {
+    public static List<BookSet> calculate2(List<BookSet> ungroupList) {
         // Initialize an empty list to store the grouped book sets
         List<BookSet> groupedBookSetList = new ArrayList<>();
 
@@ -202,7 +205,7 @@ public class Cal {
         return groupedBookSetList;
     }
 
-    public static List<BookSet> calculateChatGpt(List<BookSet> ungroupList) {
+    public static List<BookSet> calculate1(List<BookSet> ungroupList) {
         List<BookUnit> allBookUnits = new ArrayList<>();
         for (BookSet bookSet : ungroupList) {
             allBookUnits.addAll(bookSet.getBookUnitList());
@@ -234,44 +237,5 @@ public class Cal {
         }
 
         return result;
-    }
-}
-
-
-@Data
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-class BookSet {
-    private List<BookUnit> bookUnitList;
-
-    public BookSet(String... bookInfos) {
-        List<BookUnit> meatList = new ArrayList<>();
-        // singleBookInfo = "bookname,episode,weightGram"
-        for (String bookinfo : bookInfos) {
-            meatList.add(new BookUnit(bookinfo));
-        }
-        this.bookUnitList = meatList;
-    }
-}
-
-
-@Data
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-class BookUnit {
-    private String bookName;
-    private String bookEpisode;
-    private BigDecimal weightGram;
-
-    public BookUnit(String bookinfo) {
-        // singleBookInfo = "bookname,episode,weightGram"
-        String[] meta = bookinfo.split(",");
-        this.bookName = meta[0];
-        this.bookEpisode = meta[1];
-        this.weightGram = new BigDecimal(meta[2]);
     }
 }
