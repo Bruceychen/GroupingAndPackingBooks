@@ -5,169 +5,44 @@ import idv.brucey.app.VO.BookUnit;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-/**
- * Hello world!
- *
- */
 public class App {
     public static void main(String[] args) {
-        App app = new App();
-        List<BookSet> unGroupBookSetList = new ArrayList<>();
-        List<BookSet> groupedBookSetList1 = new ArrayList<>();
+        List<BookSet> groupedBookSetList1;
 
-        BookSet set01 = new BookSet();
-        BookSet set02 = new BookSet();
-        BookSet set03 = new BookSet();
-        BookSet set04 = new BookSet();
-        BookSet set05 = new BookSet();
-        BookSet set06 = new BookSet();
-        BookSet set07 = new BookSet();
-        BookSet set08 = new BookSet();
-        BookSet set09 = new BookSet();
-        BookSet set10 = new BookSet();
-        BookSet set11 = new BookSet();
-        BookSet set12 = new BookSet();
-        BookSet set13 = new BookSet();
-        BookSet set14 = new BookSet();
-        BookSet set15 = new BookSet();
-        BookSet set16 = new BookSet();
-        BookSet set17 = new BookSet();
-        BookSet set18 = new BookSet();
-        BookSet set19 = new BookSet();
-        BookSet set20 = new BookSet();
-        BookSet set21 = new BookSet();
-        BookSet set22 = new BookSet();
-        BookSet set23 = new BookSet();
-        BookSet set24 = new BookSet();
-        BookSet set25 = new BookSet();
-        BookSet set26 = new BookSet();
-        BookSet set27 = new BookSet();
-
-
-        List<BookUnit> set01BookUnitList = new ArrayList<>();
-        List<BookUnit> set02BookUnitList = new ArrayList<>();
-        List<BookUnit> set03BookUnitList = new ArrayList<>();
-        List<BookUnit> set04BookUnitList = new ArrayList<>();
-        List<BookUnit> set05BookUnitList = new ArrayList<>();
-        List<BookUnit> set06BookUnitList = new ArrayList<>();
-        List<BookUnit> set07BookUnitList = new ArrayList<>();
-        List<BookUnit> set08BookUnitList = new ArrayList<>();
-        List<BookUnit> set09BookUnitList = new ArrayList<>();
-        List<BookUnit> set10BookUnitList = new ArrayList<>();
-        List<BookUnit> set11BookUnitList = new ArrayList<>();
-        List<BookUnit> set12BookUnitList = new ArrayList<>();
-        List<BookUnit> set13BookUnitList = new ArrayList<>();
-        List<BookUnit> set14BookUnitList = new ArrayList<>();
-        List<BookUnit> set15BookUnitList = new ArrayList<>();
-        List<BookUnit> set16BookUnitList = new ArrayList<>();
-        List<BookUnit> set17BookUnitList = new ArrayList<>();
-        List<BookUnit> set18BookUnitList = new ArrayList<>();
-        List<BookUnit> set19BookUnitList = new ArrayList<>();
-        List<BookUnit> set20BookUnitList = new ArrayList<>();
-        List<BookUnit> set21BookUnitList = new ArrayList<>();
-        List<BookUnit> set22BookUnitList = new ArrayList<>();
-        List<BookUnit> set23BookUnitList = new ArrayList<>();
-        List<BookUnit> set24BookUnitList = new ArrayList<>();
-        List<BookUnit> set25BookUnitList = new ArrayList<>();
-        List<BookUnit> set26BookUnitList = new ArrayList<>();
-        List<BookUnit> set27BookUnitList = new ArrayList<>();
-
-
-        set01BookUnitList.add(new BookUnit("博兒的東瀛紀行", "5", new BigDecimal(186.7)));
-        set01BookUnitList.add(new BookUnit("博兒的東瀛紀行", "8", new BigDecimal(187.1)));
-        set01BookUnitList.add(new BookUnit("博兒的東瀛紀行", "10", new BigDecimal(196.8)));
-        set02BookUnitList.add(new BookUnit("博兒的東瀛紀行", "3", new BigDecimal(184.3)));
-        set02BookUnitList.add(new BookUnit("博兒的東瀛紀行", "4", new BigDecimal(185.5)));
-        set02BookUnitList.add(new BookUnit("博兒的東瀛紀行", "6", new BigDecimal(199.5)));
-        set02BookUnitList.add(new BookUnit("博兒的東瀛紀行", "7", new BigDecimal(201.2)));
-        set02BookUnitList.add(new BookUnit("博兒的東瀛紀行", "9", new BigDecimal(184.3)));
-        set03BookUnitList.add(new BookUnit("聽見向陽之聲 春夏秋冬 特裝版", "2", new BigDecimal(522.0)));
-        set04BookUnitList.add(new BookUnit("結緣甘神神社", "1", new BigDecimal(171.4)));
-        set05BookUnitList.add(new BookUnit("結緣甘神神社", "2", new BigDecimal(163.4)));
-        set06BookUnitList.add(new BookUnit("結緣甘神神社", "3", new BigDecimal(180.0)));
-        set07BookUnitList.add(new BookUnit("25次元誘惑", "4", new BigDecimal(190.0)));
-        set08BookUnitList.add(new BookUnit("25次元誘惑", "5", new BigDecimal(195.0)));
-        set09BookUnitList.add(new BookUnit("25次元誘惑", "6", new BigDecimal(197.3)));
-        set10BookUnitList.add(new BookUnit("25次元誘惑", "7", new BigDecimal(204.1)));
-        set11BookUnitList.add(new BookUnit("25次元誘惑", "8", new BigDecimal(191.9)));
-        set12BookUnitList.add(new BookUnit("25次元誘惑", "9", new BigDecimal(197.9)));
-        set13BookUnitList.add(new BookUnit("25次元誘惑", "10", new BigDecimal(189.0)));
-        set14BookUnitList.add(new BookUnit("25次元誘惑", "11", new BigDecimal(189.0)));
-        set15BookUnitList.add(new BookUnit("男裝女孩與嬌嬌女", "2", new BigDecimal(285.7)));
-        set16BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "11", new BigDecimal(322.3)));
-        set17BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "12", new BigDecimal(323.4)));
-        set18BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師", "6", new BigDecimal(249.5)));
-        set19BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "7", new BigDecimal(335.2)));
-        set20BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "8", new BigDecimal(365.2)));
-        set21BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "9", new BigDecimal(251.2)));
-        set22BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "10", new BigDecimal(338.7)));
-        set23BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師", "1", new BigDecimal(257.0)));
-        set24BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師", "2", new BigDecimal(245.3)));
-        set25BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師", "3", new BigDecimal(264.8)));
-        set26BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師", "4", new BigDecimal(256.0)));
-        set27BookUnitList.add(new BookUnit("如果三十歲還是處男似乎可以成為魔法師限定版", "5", new BigDecimal(279.6)));
-
-
-        set01.setBookUnitList(set01BookUnitList);
-        set02.setBookUnitList(set02BookUnitList);
-        set03.setBookUnitList(set03BookUnitList);
-        set04.setBookUnitList(set04BookUnitList);
-        set05.setBookUnitList(set05BookUnitList);
-        set06.setBookUnitList(set06BookUnitList);
-        set07.setBookUnitList(set07BookUnitList);
-        set08.setBookUnitList(set08BookUnitList);
-        set09.setBookUnitList(set09BookUnitList);
-        set10.setBookUnitList(set10BookUnitList);
-        set11.setBookUnitList(set11BookUnitList);
-        set12.setBookUnitList(set12BookUnitList);
-        set13.setBookUnitList(set13BookUnitList);
-        set14.setBookUnitList(set14BookUnitList);
-        set15.setBookUnitList(set15BookUnitList);
-        set16.setBookUnitList(set16BookUnitList);
-        set17.setBookUnitList(set17BookUnitList);
-        set18.setBookUnitList(set18BookUnitList);
-        set19.setBookUnitList(set19BookUnitList);
-        set20.setBookUnitList(set20BookUnitList);
-        set21.setBookUnitList(set21BookUnitList);
-        set22.setBookUnitList(set22BookUnitList);
-        set23.setBookUnitList(set23BookUnitList);
-        set24.setBookUnitList(set24BookUnitList);
-        set25.setBookUnitList(set25BookUnitList);
-        set26.setBookUnitList(set26BookUnitList);
-        set27.setBookUnitList(set27BookUnitList);
-
-        unGroupBookSetList.add(set01);
-        unGroupBookSetList.add(set02);
-        unGroupBookSetList.add(set03);
-        unGroupBookSetList.add(set04);
-        unGroupBookSetList.add(set05);
-        unGroupBookSetList.add(set06);
-        unGroupBookSetList.add(set07);
-        unGroupBookSetList.add(set08);
-        unGroupBookSetList.add(set09);
-        unGroupBookSetList.add(set10);
-        unGroupBookSetList.add(set11);
-        unGroupBookSetList.add(set12);
-        unGroupBookSetList.add(set13);
-        unGroupBookSetList.add(set14);
-        unGroupBookSetList.add(set15);
-        unGroupBookSetList.add(set16);
-        unGroupBookSetList.add(set17);
-        unGroupBookSetList.add(set18);
-        unGroupBookSetList.add(set19);
-        unGroupBookSetList.add(set20);
-        unGroupBookSetList.add(set21);
-        unGroupBookSetList.add(set22);
-        unGroupBookSetList.add(set23);
-        unGroupBookSetList.add(set24);
-        unGroupBookSetList.add(set25);
-        unGroupBookSetList.add(set26);
-        unGroupBookSetList.add(set27);
-        //
-        groupedBookSetList1 = app.calculate1(unGroupBookSetList);
-
+        BookSet[] bookSets = {
+            new BookSet("博兒的東瀛紀行,5,186.7", "博兒的東瀛紀行,8,187.1", "博兒的東瀛紀行,10,196.8"),
+            new BookSet("博兒的東瀛紀行,3,184.3", "博兒的東瀛紀行,4,185.5", "博兒的東瀛紀行,6,199.5", "博兒的東瀛紀行,7,201.2", "博兒的東瀛紀行,9,184.3"),
+            new BookSet("聽見向陽之聲 春夏秋冬 特裝版,2,522.0"),
+            new BookSet("結緣甘神神社,1,171.4"),
+            new BookSet("結緣甘神神社,2,163.4"),
+            new BookSet("結緣甘神神社,3,180.0"),
+            new BookSet("25次元誘惑,4,190.0"),
+            new BookSet("25次元誘惑,5,195.0"),
+            new BookSet("25次元誘惑,6,197.3"),
+            new BookSet("25次元誘惑,7,204.1"),
+            new BookSet("25次元誘惑,8,191.9"),
+            new BookSet("25次元誘惑,9,197.9"),
+            new BookSet("25次元誘惑,10,189.0"),
+            new BookSet("25次元誘惑,11,189.0"),
+            new BookSet("男裝女孩與嬌嬌女,2,285.7"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,11,322.3"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,12,323.4"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師,6,249.5"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,7,335.2"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,8,365.2"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,9,251.2"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,10,338.7"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師,1,257.0"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師,2,245.3"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師,3,264.8"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師,4,256.0"),
+            new BookSet("如果三十歲還是處男似乎可以成為魔法師限定版,5,279.6"),
+        };
+        List<BookSet> unGroupBookSetList = new ArrayList<>(Arrays.stream(bookSets).toList());
+        groupedBookSetList1 = calculate1(unGroupBookSetList);
         System.out.println(groupedBookSetList1);
     }
 
